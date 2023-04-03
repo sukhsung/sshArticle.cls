@@ -1,0 +1,33 @@
+\documentclass[SI]{sshArticle}% Try darkmode [SI, dark]
+
+\input{preamble.tex}
+
+\usepackage{lipsum}
+
+\renewcommand{\theHsection}{arabicsection.\thesection}
+\renewcommand{\thesection}{Supplementary Figure S\arabic{section}}
+\begin{document}
+\maketitle
+
+\clearpage
+\section{Introduction}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{example-image-a}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+This is test for sshArticle.cls in SI mode.
+
+Shameless plug here: ~\cite{Sung_2022}
+
+\lipsum[1-2]
+
+
+\section*{References}
+\par\vspace{5pt}
+{\printbibliography[heading=none]}
+
+
+\end{document}

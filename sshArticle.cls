@@ -11,6 +11,7 @@
     \def\maketitle{\makeMaintitle{}}
     \def\sectiongap{-3pt}
     \def\subsectiongap{-3pt}
+    \def\sectionFontSize{\normalsize}
     \PassOptionsToClass{twocolumn}{article}
     \setlength{\columnsep}{15pt}
 }
@@ -18,6 +19,7 @@
 \DeclareOption{SI}{%
     \def\maketitle{\makeSItitle{}}
     \def\sectiongap{0pt}
+    \def\sectionFontSize{\large}
     \PassOptionsToClass{onecolumn}{article}
 }
 
@@ -143,7 +145,7 @@
     
 %% Section Headers
 \RequirePackage[noindentafter]{titlesec}
-\titleformat*{\section}{\sffamily\normalsize\bfseries}{}
+\titleformat*{\section}{\sffamily\sectionFontSize\bfseries}{}
 \titlespacing{\section}{0pt}{18pt}{\sectiongap}
 \titleformat*{\subsection}{\sffamily\normalsize\bfseries}
 \titlespacing{\subsection}{0pt}{8pt}{\subsectiongap}
